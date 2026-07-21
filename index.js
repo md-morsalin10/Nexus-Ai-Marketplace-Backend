@@ -25,7 +25,7 @@ const client = new MongoClient(uri, {
 
 async function run() {
     try {
-        await client.connect();
+        // await client.connect();
         console.log("Connected to MongoDB");
 
         const database = client.db("GadgetHub");
@@ -659,8 +659,9 @@ async function run() {
             }
         });
 
-        await client.db("admin").command({ ping: 1 });
-        console.log("✅ Connected to MongoDB — NexusAI Marketplace Backend Ready");
+        // await client.db("admin").command({ ping: 1 });
+        // console.log("✅ Connected to MongoDB — NexusAI Marketplace Backend Ready");
+        
     } finally {
         // await client.close();
     }
